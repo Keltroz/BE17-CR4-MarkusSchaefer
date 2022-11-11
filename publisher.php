@@ -3,8 +3,8 @@
 require_once "./actions/db_connect.php";
 
 if($_GET["publisher_name"]){
-    $publisher = $_GET["publisher_name"];
-    $mysql = "SELECT * FROM library WHERE pubisher_name = $publisher";
+    $publisher_name = $_GET["publisher_name"];
+    $mysql = "SELECT * FROM library WHERE pubisher_name = $publisher_name";
     $result = mysqli_query($connect, $mysql);
     $list = "";
     
