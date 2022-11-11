@@ -41,6 +41,14 @@ if ($_GET) {
             margin: 5% auto;
             width: 30%;
         }
+
+        img {
+            width: 15%;
+        }
+
+        .btn-primary {
+            width: 100px;
+        }
     </style>
 </head>
 
@@ -48,7 +56,7 @@ if ($_GET) {
 
     <div class="bg-container">
         <fieldset class="field-container">
-            <legend class='h2 mb-5 fw-bold font-monospace text-decoration-underline text-center'>Update product <img class='img-thumbnail rounded-circle' src='./images/<?= $image ?>' alt=""></legend>
+            <legend class='h2 mb-5 fw-bold font-monospace text-decoration-underline text-center'>Update product <img class='img-thumbnail rounded-circle ms-4' src='./images/<?= $image ?>' alt=""></legend>
             <form action="actions/a_update.php" method="post" enctype="multipart/form-data">
                 <table class='table table-dark'>
                     <tr>
@@ -93,8 +101,8 @@ if ($_GET) {
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <button onclick="window.location.href='index.php'" class='btn btn-primary' style="float:left;" type="button">Home</button>
-                            <button class='btn btn-success' style="float: right;" type="submit">Insert Product</button>
+                            <button onclick="window.location.href='index.php'" class='btn btn-primary' style="float:left;" type="button">Back</button>
+                            <button class='btn btn-success' style="float: right;" type="submit">Update Product</button>
                         </td>
                     </tr>
                     <tr>
@@ -106,32 +114,6 @@ if ($_GET) {
         </fieldset>
     </div>
 
-    <!-- <fieldset>
-        <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='./images/<?= $image ?>' alt=""></legend>
-        <form action="actions/a_update.php" method="post" enctype="multipart/form-data">
-            <table class="table">
-                <tr>
-                    <th>Name</th>
-                    <td><input class="form-control" type="text" name="title" placeholder="Product Name" value="<?= $title ?>" /></td>
-                </tr>
-                <tr>
-                    <th>Price</th>
-                    <td><input class="form-control" type="number" name="type" step="any" placeholder="Price" value="<?= $type ?>" /></td>
-                </tr>
-                <tr>
-                    <th>Picture</th>
-                    <td><input class="form-control" type="file" name="picture" /></td>
-                </tr>
-                <tr>
-                    <input type="hidden" name="id" value="<?= $id ?>" />
-
-                    <input type="hidden" name="image" value="<?= $image ?>" />
-                    <td><button class="btn btn-success" type="submit">Save Changes</button></td>
-                    <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
-                </tr>
-            </table>
-        </form>
-    </fieldset> -->
 </body>
 
 </html>

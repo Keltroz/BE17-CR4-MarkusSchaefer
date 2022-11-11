@@ -51,6 +51,10 @@ if ($_GET["id"]) {
         table {
             margin: 0 auto;
         }
+
+        .btn {
+            width: 100px;
+        }
     </style>
 </head>
 
@@ -75,8 +79,8 @@ if ($_GET["id"]) {
         <form action="actions/a_delete.php" method="post">
             <input type="hidden" name="id" value="<?= $id ?>" />
             <input type="hidden" name="image" value="<?= $image ?>" />
-            <button class="btn btn-warning" type="button" onclick="window.location.href='index.php'" style="float: left;">No, go back!</button>
-            <button class="btn btn-danger" type="submit" style="float: right;">Yes, delete it!</button>
+            <button class="btn btn-warning" type="button" onclick="window.location.href='index.php'" style="float: left;">No</button>
+            <button class="btn btn-danger" type="submit" style="float: right;">Yes</button>
         </form>
     </fieldset>
 </body>

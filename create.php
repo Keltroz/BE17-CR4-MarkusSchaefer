@@ -29,6 +29,10 @@
             margin-bottom: 5%;
         }
 
+        .btn-primary {
+            width: 100px;
+        }
+        
     </style>
 </head>
 
@@ -80,8 +84,8 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <button onclick="window.location.href='index.php'" class='btn btn-primary' style="float:left;" type="button">Home</button>
-                            <button class='btn btn-success' style="float: right;" type="submit">Insert Product</button>
+                            <button onclick="window.location.href='index.php'" class='btn btn-primary' style="float:left;" type="button">Back</button>
+                            <button class='btn btn-success' style="float: right;" type="submit">Add Product</button>
                         </td>
                     </tr>
                 </table>

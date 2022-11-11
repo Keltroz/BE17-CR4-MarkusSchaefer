@@ -14,7 +14,7 @@ if (mysqli_num_rows($result) > 0) {
            <td>" . $article['type'] . "</td>
            <td style='border-right: none; text-align: right;'>" . $article["author_first_name"] . "</td>
            <td style='border-left: none; text-align: left;'>" . $article["author_last_name"] . "</td>
-           <td><a href=''>" . $article["publisher_name"] . "</a></td>
+           <td><a href='publisher.php?name=" . $article["publisher_name"] . "'>" . $article["publisher_name"] . "</a></td>
            <td>" . $article["availability"] . "</td>
            <td><a href='update.php?id=" . $article["id"] . "'><button class='btn btn-primary btnWidth me-2' type='button'>Edit</button></a>
            <a href='delete.php?id=" . $article["id"] . "'><button class='btn btn-danger btnWidth ms-2' type='button'>Delete</button></a></td>
@@ -113,7 +113,7 @@ if (mysqli_num_rows($result) > 0) {
                 </tbody>
             </table>
             <div class="button">
-                <a href="create.php"><button class='btn btn-primary' type="button">Add product</button></a>
+                <button class='btn btn-primary' type="button" onclick="window.location.href='create.php'">Add product</button>
             </div>
         </div>
 </body>
