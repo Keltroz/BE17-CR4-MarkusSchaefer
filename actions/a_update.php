@@ -28,7 +28,7 @@ if ($_POST) {
         $message = "The entry was successfully updated";
         $uploadError = ($image->error != 0) ? $image->ErrorMessage : "";
     } else {
-        $class = "Failed";
+        $class = "danger";
         $message = "Error occurred while updating the entry: <br>" . mysqli_connect_error();
         $uploadError = ($image->error != 0) ? $image->ErrorMessage : "";
     }
@@ -47,18 +47,24 @@ if ($_POST) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Review 4</title>
     <?php require_once "../components/boot.php" ?>
+    <style type="text/css">
+        .container {
+            margin: 5% auto;
+            width: 30%;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="mt-3 mb-3">
-            <h1>Update request response</h1>
+        <div class="mt-3 mb-5">
+            <h1 class="text-center font-monospace text-decoration-underline">Update request response</h1>
         </div>
         <div class="alert alert-<?php echo $class; ?>" role="alert">
-            <p><?php echo $message; ?></p>
-            <p><?php echo $uploadError; ?></p>
+            <p style="font-size: 24px;"><?php echo $message; ?></p>
+            <p style="font-size: 24px;"><?php echo $uploadError; ?></p>
             <button class="btn btn-warning" type='button' onclick="window.location.href='../update.php?id=<?= $id ?>'">Back</button>
-            <button class="btn btn-success" type='button' onclick="window.location.href='../index.php'">Home</button>
+            <button class="btn btn-success" type='button' onclick="window.location.href='../index.php'" style="float: right;">Home</button>
         </div>
     </div>
 </body>

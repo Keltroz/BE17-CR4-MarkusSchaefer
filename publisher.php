@@ -11,11 +11,12 @@ if($_GET["publisher_name"]){
     if (mysqli_num_rows($result) > 0) {
             $test = mysqli_fetch_assoc($result);
             $list .=  "<td>" . $test['title'] . "</td><br>
-            <td>" . $test['type'] . "</td>";
+                       <td>" . $test['type'] . "</td>";
     } else {
         $list = "<tr><td colspan='4' class='text-center'>No data available</td></tr>";
     }
 }
+
 ?>
 
 <!DOCTYPE html>
