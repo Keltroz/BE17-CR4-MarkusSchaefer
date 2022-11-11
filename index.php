@@ -16,8 +16,8 @@ if (mysqli_num_rows($result) > 0) {
            <td style='border-left: none; text-align: left;'>" . $article['author_last_name'] . "</td>
            <td><a href=''>" . $article['publisher_name'] . "</a></td>
            <td>" . $article['availability'] . "</td>
-           <td><a href='update.php?id=" . $article['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
-           <a href='delete.php?id=" . $article['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a></td>
+           <td><a href='update.php?id=" . $article['id'] . "'><button class='btn btn-primary btnWidth me-2' type='button'>Edit</button></a>
+           <a href='delete.php?id=" . $article['id'] . "'><button class='btn btn-danger btnWidth ms-2' type='button'>Delete</button></a></td>
            </tr>
            ";
     }
@@ -84,6 +84,10 @@ if (mysqli_num_rows($result) > 0) {
         .bg-container {
             background-color: antiquewhite;
             height: 100%;
+        }
+
+        .btnWidth {
+            width: 70px;
         }
 
     </style>
