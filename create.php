@@ -48,7 +48,7 @@
                     </tr>
                     <tr>
                         <th>Description</th>
-                        <td><textarea class='form-control bigBox' type="text" name="description" placeholder="Description" style="height: 150px;"></textarea></td>
+                        <td><textarea class='form-control' type="text" name="description" placeholder="Description" style="height: 150px;"></textarea></td>
                     </tr>
                     <tr>
                         <th>Author</th>

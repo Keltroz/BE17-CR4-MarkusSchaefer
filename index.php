@@ -9,15 +9,15 @@ if (mysqli_num_rows($result) > 0) {
     while ($article = mysqli_fetch_assoc($result)) {
         $list .= "
         <tr>
-           <td><a href=''><img class='image' src='pictures/" . $article['image'] . "'></a></td>
+           <td><a href=''><img class='image' src='images/" . $article["image"] . "'></a></td>
            <td>" . $article['title'] . "</td>
            <td>" . $article['type'] . "</td>
-           <td style='border-right: none; text-align: right;'>" . $article['author_first_name'] . "</td>
-           <td style='border-left: none; text-align: left;'>" . $article['author_last_name'] . "</td>
-           <td><a href=''>" . $article['publisher_name'] . "</a></td>
-           <td>" . $article['availability'] . "</td>
-           <td><a href='update.php?id=" . $article['id'] . "'><button class='btn btn-primary btnWidth me-2' type='button'>Edit</button></a>
-           <a href='delete.php?id=" . $article['id'] . "'><button class='btn btn-danger btnWidth ms-2' type='button'>Delete</button></a></td>
+           <td style='border-right: none; text-align: right;'>" . $article["author_first_name"] . "</td>
+           <td style='border-left: none; text-align: left;'>" . $article["author_last_name"] . "</td>
+           <td><a href=''>" . $article["publisher_name"] . "</a></td>
+           <td>" . $article["availability"] . "</td>
+           <td><a href='update.php?id=" . $article["id"] . "'><button class='btn btn-primary btnWidth me-2' type='button'>Edit</button></a>
+           <a href='delete.php?id=" . $article["id"] . "'><button class='btn btn-danger btnWidth ms-2' type='button'>Delete</button></a></td>
            </tr>
            ";
     }
@@ -64,8 +64,7 @@ if (mysqli_num_rows($result) > 0) {
         }
 
         .image {
-            width: 40%;
-            /* height: 50%; */
+            width: 70px;
         }
 
         a {
@@ -77,8 +76,9 @@ if (mysqli_num_rows($result) > 0) {
             text-decoration: none;
         }
 
-        html, body {
-            height: 100%;
+        html,
+        body {
+            height: 150%;
         }
 
         .bg-container {
@@ -89,7 +89,6 @@ if (mysqli_num_rows($result) > 0) {
         .btnWidth {
             width: 70px;
         }
-
     </style>
 </head>
 
@@ -117,7 +116,7 @@ if (mysqli_num_rows($result) > 0) {
                 <a href="create.php"><button class='btn btn-primary' type="button">Add product</button></a>
             </div>
         </div>
-    </div>
 </body>
+</div>
 
 </html>
