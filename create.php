@@ -25,6 +25,10 @@
             height: 100%;
         }
 
+        .h2 {
+            margin-bottom: 5%;
+        }
+
     </style>
 </head>
 
