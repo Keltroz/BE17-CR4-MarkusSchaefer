@@ -17,12 +17,7 @@
 
         html,
         body {
-            height: 100%;
-        }
-
-        .bg-container {
             background-color: antiquewhite;
-            height: 100%;
         }
 
         .h2 {

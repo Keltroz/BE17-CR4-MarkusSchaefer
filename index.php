@@ -78,12 +78,8 @@ if (mysqli_num_rows($result) > 0) {
 
         html,
         body {
-            height: 150%;
-        }
-
-        .bg-container {
             background-color: antiquewhite;
-            height: 100%;
+            padding-bottom: 3%;
         }
 
     </style>

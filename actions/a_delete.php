@@ -45,6 +45,11 @@ if ($_POST) {
             margin: 5% auto;
             width: 30%;
         }
+
+        html,
+        body {
+            background-color: antiquewhite;
+        }
     </style>
 </head>
 

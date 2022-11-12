@@ -55,6 +55,12 @@ if ($_GET["id"]) {
         .btn {
             width: 100px;
         }
+
+        html,
+        body {
+            background-color: antiquewhite;
+        }
+        
     </style>
 </head>
 

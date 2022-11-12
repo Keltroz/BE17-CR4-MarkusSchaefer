@@ -40,6 +40,7 @@ if ($_GET["id"]) {
         .field-container {
             margin: 3% auto;
             width: 30%;
+            background-color: antiquewhite;
         }
 
         img {
@@ -50,11 +51,16 @@ if ($_GET["id"]) {
         .btn-primary {
             width: 100px;
         }
+
+        html,
+        body {
+            background-color: antiquewhite;
+        }
+
     </style>
 </head>
 
 <body>
-
     <div class="bg-container">
         <fieldset class="field-container">
             <legend class='h2 mb-5 fw-bold font-monospace text-decoration-underline text-center'>Update product <img class='rounded-circle ms-4' src='./images/<?= $image ?>' alt=""></legend>
