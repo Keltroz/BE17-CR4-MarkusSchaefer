@@ -16,7 +16,9 @@ if (mysqli_num_rows($result) > 0) {
            <td style='border-left: none; text-align: left;'>" . $article["author_last_name"] . "</td>
            <td><a href='publisher.php?publisher_name=" . urlencode($article["publisher_name"]) . "'>" . $article["publisher_name"] . "</a></td>
            <td>" . $article["availability"] . "</td>
-           <td><a href='update.php?id=" . $article["id"] . "'><button class='btn btn-primary me-2' type='button' style='width: 70px;'>Edit</button></a>
+           <td>
+           <a href='update.php?id=" . $article["id"] . "'><button class='btn btn-warning me-2' type='button'>Show Details</button></a>
+           <a href='update.php?id=" . $article["id"] . "'><button class='btn btn-primary ms-2 me-2' type='button' style='width: 70px;'>Edit</button></a>
            <a href='delete.php?id=" . $article["id"] . "'><button class='btn btn-danger ms-2' type='button' style='width: 70px;'>Delete</button></a></td>
            </tr>
            ";

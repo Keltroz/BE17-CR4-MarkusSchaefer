@@ -42,6 +42,11 @@ if ($_GET["publisher_name"]) {
             width: 70px;
         }
 
+        html,
+        body {
+            background-color: antiquewhite;
+        }
+        
     </style>
 </head>
 
