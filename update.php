@@ -70,7 +70,7 @@ if ($_GET["id"]) {
                     </tr>
                     <tr>
                         <th>Description</th>
-                        <td><textarea class='form-control' type="text" name="description" placeholder="Description" value="<?= $description ?>" style="height: 150px;"></textarea></td>
+                        <td><input class='form-control' type="text" name="description" placeholder="Description" value="<?= $description ?>"></td>
                     </tr>
                     <tr>
                         <th>Author</th>

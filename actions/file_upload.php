@@ -18,7 +18,7 @@ function file_upload($image){
     } else {
         if (in_array($fileExtension, $filesAllowed)) {
             if ($fileError == 0) {
-                if ($fileSize < 500000) {
+                if ($fileSize < 10000000) {
                     $fileNewName = uniqid('') . "." . $fileExtension;
                     $destination = "../images/$fileNewName";
                     if (move_uploaded_file($fileTmpName, $destination)) {
@@ -30,7 +30,7 @@ function file_upload($image){
                         return $result;
                     }
                 } else {
-                    $result->ErrorMessage = "This image is bigger than the allowed 500Kb. <br> Please choose a smaller one and update the product.";
+                    $result->ErrorMessage = "This image is bigger than the allowed 10000Kb. <br> Please choose a smaller one and update the product.";
                     return $result;
                 }
             } else {

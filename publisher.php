@@ -10,14 +10,14 @@ if ($_GET["publisher_name"]) {
     
     if (mysqli_num_rows($result) > 0) {
         while ($data = mysqli_fetch_assoc($result)) {
-            $list .=  "<tr><td>" . $data['title'] . "</td><br>
+            $list .=  "<tr><td>" . $data['title'] . "</td>
                         <td>" . $data['type'] . "</td></tr>";
         }
     } else {
         $list = "<tr><td colspan='4' class='text-center'>No data available</td></tr>";
     }
 } else {
-    // header("location: error.php");
+    header("location: error.php");
 }
 
 ?>
@@ -48,7 +48,7 @@ if ($_GET["publisher_name"]) {
 <body>
     <div class="bg-container">
         <div class="products">
-            <p class="h1 text-center font-monospace text-decoration-underline">Publisher</p>
+            <p class="h1 text-center font-monospace text-decoration-underline mb-5">Publisher</p>
             <table class='table table-striped table-dark table-hover'>
                 <thead>
                     <tr>
