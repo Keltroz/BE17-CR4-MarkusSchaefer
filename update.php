@@ -44,8 +44,8 @@ if ($_GET["id"]) {
         }
 
         img {
-            width: 110px;
-            height: 110px;
+            width: 100px;
+            height: 100px;
         }
 
         .btn-primary {
@@ -63,7 +63,7 @@ if ($_GET["id"]) {
 <body>
     <div class="bg-container">
         <fieldset class="field-container">
-            <legend class='h2 mb-5 fw-bold font-monospace text-decoration-underline text-center'>Update product <img class='rounded-circle ms-4' src='./images/<?= $image ?>' alt=""></legend>
+            <legend class='h1 mb-5 font-monospace text-decoration-underline text-center'>Update product <img class='rounded-circle ms-4' src='./images/<?= $image ?>' alt=""></legend>
             <form action="actions/a_update.php" method="post" enctype="multipart/form-data">
                 <table class='table table-dark'>
                     <tr>

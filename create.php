@@ -34,7 +34,7 @@
 <body>
     <div class="bg-container">
         <fieldset class="field-container">
-            <legend class='h2'>Add Product</legend>
+            <legend class='h1 font-monospace text-decoration-underline'>Add Product</legend>
             <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
                 <table class='table table-dark'>
                     <tr>
@@ -80,7 +80,7 @@
                     <tr>
                         <td colspan="2">
                             <button onclick="window.location.href='index.php'" class='btn btn-primary' style="float:left;" type="button">Back</button>
-                            <button class='btn btn-success' style="float: right;" type="submit">Add Entry</button>
+                            <button class='btn btn-success' style="float: right;" type="submit">Add Product</button>
                         </td>
                     </tr>
                 </table>

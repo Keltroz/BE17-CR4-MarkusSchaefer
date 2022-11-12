@@ -45,7 +45,8 @@ if ($_GET["id"]) {
         }
 
         img {
-            width: 100%;
+            /* width: 50%; */
+            height: 300px;
         }
 
         table {
@@ -60,22 +61,22 @@ if ($_GET["id"]) {
         body {
             background-color: antiquewhite;
         }
-        
+
     </style>
 </head>
 
 <body>
     <fieldset>
-        <legend class='fs-2 fw-bold font-monospace text-decoration-underline text-center mb-5'>Delete request</legend>
+        <legend class='h1 font-monospace text-decoration-underline text-center mb-5'>Delete request</legend>
         <h4 class="mb-5">You have selected the data below:</h5>
         <table class="mt-3">
             <tr>
-                <td class="test fs-4">
+                <td class="test fs-4 text-center">
                     <?= $title ?>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="text-center">
                     <img class='rounded mt-4 mb-4' src='images/<?php echo $image ?>' alt="<?php echo $title ?>">
                 </td>
             </tr>

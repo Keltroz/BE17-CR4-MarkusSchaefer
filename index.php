@@ -12,10 +12,9 @@ if (mysqli_num_rows($result) > 0) {
            <td><a href=''><img class='image' src='images/" . $article["image"] . "'></a></td>
            <td>" . $article['title'] . "</td>
            <td>" . $article['type'] . "</td>
-           <td style='border-right: none; text-align: right;'>" . $article["author_first_name"] . "</td>
-           <td style='border-left: none; text-align: left;'>" . $article["author_last_name"] . "</td>
+           <td style='border-right: none; text-align: center;'>" . $article["author_first_name"] . "</td>
+           <td style='border-left: none; text-align: center;'>" . $article["author_last_name"] . "</td>
            <td><a href='publisher.php?publisher_name=" . urlencode($article["publisher_name"]) . "'>" . $article["publisher_name"] . "</a></td>
-           <td>" . $article["availability"] . "</td>
            <td>
            <a href='details.php?id=" . $article["id"] . "'><button class='btn btn-warning me-2' type='button'>Show Details</button></a>
            <a href='update.php?id=" . $article["id"] . "'><button class='btn btn-primary ms-2 me-2' type='button' style='width: 70px;'>Edit</button></a>
@@ -50,7 +49,6 @@ if (mysqli_num_rows($result) > 0) {
 
         .h1 {
             margin-bottom: 2%;
-            font-weight: 600;
         }
 
         .button {
@@ -99,7 +97,6 @@ if (mysqli_num_rows($result) > 0) {
                         <th>Type</th>
                         <th colspan="2">Author</th>
                         <th>Publisher</th>
-                        <th>Availability</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -108,7 +105,7 @@ if (mysqli_num_rows($result) > 0) {
                 </tbody>
             </table>
             <div class="button">
-                <button class='btn btn-primary' type="button" onclick="window.location.href='create.php'">Add Entry</button>
+                <button class='btn btn-primary' type="button" onclick="window.location.href='create.php'">Add Product</button>
             </div>
         </div>
 </body>
