@@ -2,7 +2,7 @@
 
 require_once "./actions/db_connect.php";
 
-if ($_GET) {
+if ($_GET["id"]) {
     $id = $_GET["id"];
     $mysql = "SELECT * FROM library WHERE id = $id";
     $result = mysqli_query($connect, $mysql);
