@@ -110,7 +110,7 @@ if (mysqli_num_rows($result) > 0) {
                 </tbody>
             </table>
             <div class="button">
-                <button class='btn btn-primary' type="button" onclick="window.location.href='create.php'">Add product</button>
+                <button class='btn btn-primary' type="button" onclick="window.location.href='create.php'">Add Entry</button>
             </div>
         </div>
 </body>

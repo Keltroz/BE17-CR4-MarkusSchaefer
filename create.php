@@ -52,7 +52,7 @@
                     </tr>
                     <tr>
                         <th>Description</th>
-                        <td><textarea class='form-control' type="text" name="description" placeholder="Description" style="height: 150px;"></textarea></td>
+                        <td><input class='form-control' type="text" name="description" placeholder="Description"></td>
                     </tr>
                     <tr>
                         <th>Author</th>
@@ -85,7 +85,7 @@
                     <tr>
                         <td colspan="2">
                             <button onclick="window.location.href='index.php'" class='btn btn-primary' style="float:left;" type="button">Back</button>
-                            <button class='btn btn-success' style="float: right;" type="submit">Add Product</button>
+                            <button class='btn btn-success' style="float: right;" type="submit">Add Entry</button>
                         </td>
                     </tr>
                 </table>
