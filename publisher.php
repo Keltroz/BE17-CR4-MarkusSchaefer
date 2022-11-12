@@ -2,12 +2,12 @@
 
 require_once "./actions/db_connect.php";
 
-if ($_POST["publisher_name"]) {
-    $variable = $_POST["publisher_name"];
-    $mysql = "SELECT * FROM library WHERE publisher_name = $variable";
+$list = "";
+if ($_GET["publisher_name"]) {
+    $article = $_GET["publisher_name"];
+    $mysql = "SELECT * FROM library WHERE publisher_name = '$article'";
     $result = mysqli_query($connect, $mysql);
-    $list = "";
-
+    
     if (mysqli_num_rows($result) > 0) {
         while ($data = mysqli_fetch_assoc($result)) {
             $list .=  "<tr><td>" . $data['title'] . "</td><br>
@@ -34,20 +34,25 @@ if ($_POST["publisher_name"]) {
 
     <style type="text/css">
         .bg-container {
-            margin: 0 auto;
-            width: 60%;
+            margin: 5% auto;
+            width: 30%;
         }
+
+        .btn {
+            width: 70px;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="bg-container">
         <div class="products">
-            <p class="h1">Products</p>
+            <p class="h1 text-center font-monospace text-decoration-underline">Publisher</p>
             <table class='table table-striped table-dark table-hover'>
                 <thead>
                     <tr>
-                        <th colspan="2">Published</th>
+                        <th class="text-center" colspan="2"><?= $article ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -57,7 +62,7 @@ if ($_POST["publisher_name"]) {
                 </tbody>
             </table>
             <div class="button">
-                <a href="create.php"><button class='btn btn-primary' type="button">Add product</button></a>
+                <a href="index.php"><button class='btn btn-primary' type="button">Back</button></a>
             </div>
         </div>
 </body>

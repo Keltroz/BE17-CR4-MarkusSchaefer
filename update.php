@@ -38,12 +38,13 @@ if ($_GET["id"]) {
 
     <style type="text/css">
         .field-container {
-            margin: 5% auto;
+            margin: 3% auto;
             width: 30%;
         }
 
         img {
-            width: 15%;
+            width: 110px;
+            height: 110px;
         }
 
         .btn-primary {
@@ -56,7 +57,7 @@ if ($_GET["id"]) {
 
     <div class="bg-container">
         <fieldset class="field-container">
-            <legend class='h2 mb-5 fw-bold font-monospace text-decoration-underline text-center'>Update product <img class='img-thumbnail rounded-circle ms-4' src='./images/<?= $image ?>' alt=""></legend>
+            <legend class='h2 mb-5 fw-bold font-monospace text-decoration-underline text-center'>Update product <img class='rounded-circle ms-4' src='./images/<?= $image ?>' alt=""></legend>
             <form action="actions/a_update.php" method="post" enctype="multipart/form-data">
                 <table class='table table-dark'>
                     <tr>
